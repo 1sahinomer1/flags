@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* size height */
+/* color variables */
+/* moon variables */
+/* star variables */
+.azerbaijanFlag {
+  height: 600px;
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.azerbaijanFlag .part1 {
+  background-color: #00b5e2;
+  width: 1200px;
+  height: 200px;
+}
+
+.azerbaijanFlag .part2 {
+  background-color: #ef3340;
+  width: 1200px;
+  height: 200px;
+  position: relative;
+}
+
+.azerbaijanFlag .part2 .moonStar::before {
+  content: "";
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 600px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+
+.azerbaijanFlag .part2 .moonStar::after {
+  content: "";
+  width: 150px;
+  height: 150px;
+  background-color: #ef3340;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 620px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.azerbaijanFlag .part2 .moonStar .star {
+  width: 100px;
+  height: 100px;
+  -webkit-clip-path: polygon(0% 50%, 25% 40%, 15% 15%, 40% 25%, 50% 0%, 60% 25%, 85% 15%, 75% 40%, 100% 50%, 75% 60%, 85% 85%, 60% 75%, 50% 100%, 40% 75%, 15% 85%, 25% 60%);
+          clip-path: polygon(0% 50%, 25% 40%, 15% 15%, 40% 25%, 50% 0%, 60% 25%, 85% 15%, 75% 40%, 100% 50%, 75% 60%, 85% 85%, 60% 75%, 50% 100%, 40% 75%, 15% 85%, 25% 60%);
+  background: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 640px;
+  -webkit-transform: translateY(-50%) rotate(-18deg);
+          transform: translateY(-50%) rotate(-18deg);
+}
+
+.azerbaijanFlag .part3 {
+  background-color: #509e2f;
+  width: 1200px;
+  height: 200px;
+}
+/*# sourceMappingURL=index.css.map */

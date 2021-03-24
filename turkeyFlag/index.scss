@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* variables */
+$height: 600px;
+$width: $height * 1.5;
+$redColor: #e30a17;
+$moonr: $height/2;
+$mooninr: $height * 0.4;
+$mooninposition: $moonr + $height/16;
+$starinr: $height/4;
+$starposition: $mooninposition - $mooninr/2 + $height/3;
+
+.turkeyFlag {
+  width: $width;
+  height: $height;
+  background-color: $redColor;
+  position: relative;
+  &::before {
+    content: "";
+    width: $moonr;
+    height: $moonr;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: $moonr;
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    content: "";
+    width: $mooninr;
+    height: $mooninr;
+    background-color: $redColor;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: $mooninposition;
+    transform: translate(-50%, -50%);
+  }
+  .star {
+    width: $starinr;
+    height: $starinr;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: $starposition;
+    transform: translateY(-50%) rotate(-18deg);
+  }
+}

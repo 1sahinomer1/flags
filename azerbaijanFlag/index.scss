@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* size height */
+$height: 600px;
+$width: $height * 2;
+$partheight: $height/3;
+
+/* color variables */
+$part1color: #00b5e2;
+$part2color: #ef3340;
+$part3color: #509e2f;
+
+/* moon variables */
+$moonr: $height * 0.3;
+$mooninr: $height * 0.25;
+$mooninposition: $height + $height / 30;
+/* star variables */
+$starheight: $height/6;
+$starposition: $mooninposition + $height/30;
+
+.azerbaijanFlag {
+  height: $height;
+  width: $width;
+  display: flex;
+  flex-direction: column;
+  .part1 {
+    background-color: $part1color;
+    width: $width;
+    height: $partheight;
+  }
+  .part2 {
+    background-color: $part2color;
+    width: $width;
+    height: $partheight;
+    position: relative;
+    .moonStar {
+      &::before {
+        content: "";
+        width: $moonr;
+        height: $moonr;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: $height;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+      }
+      &::after {
+        content: "";
+        width: $mooninr;
+        height: $mooninr;
+        background-color: $part2color;
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        left: $mooninposition;
+        transform: translate(-50%, -50%);
+      }
+      .star {
+        width: $starheight;
+        height: $starheight;
+        clip-path: polygon(
+          0% 50%,
+          25% 40%,
+          15% 15%,
+          40% 25%,
+          50% 0%,
+          60% 25%,
+          85% 15%,
+          75% 40%,
+          100% 50%,
+          75% 60%,
+          85% 85%,
+          60% 75%,
+          50% 100%,
+          40% 75%,
+          15% 85%,
+          25% 60%
+        );
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: $starposition;
+        transform: translateY(-50%) rotate(-18deg);
+      }
+    }
+  }
+  .part3 {
+    background-color: $part3color;
+    width: $width;
+    height: $partheight;
+  }
+}
