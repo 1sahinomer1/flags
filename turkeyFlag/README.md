@@ -1,3 +1,3 @@
 #Turkey Flag
 
-![turkeyflag](https://hizliresim.com/PxUhzp)
+[url=https://hizliresim.com/PxUhzp][img]https://i.hizliresim.com/PxUhzp.png[/img][/url]
