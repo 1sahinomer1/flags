@@ -1,3 +1,3 @@
 #Turkey Flag
 
-<img src="https://hizliresim.com/PxUhzp" alt="turkey flag"></img>
+![alt text](https://hizliresim.com/PxUhzp)
